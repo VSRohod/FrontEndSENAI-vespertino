@@ -15,6 +15,24 @@ header nav{
     color: var(--azul);
 }
 
+footer{
+    background-color: var(--azul);
+}
+
 #catalogo h3, #catalogo h4{
     color: var(--laranja);
 }
+
+.card h5{
+    color: var(--verde)!important;
+}
+
+.card-body button{
+    background-color: var(--rosa)!important;
+    border-radius: 0%!important;
+    border: none!important;
+    color: var(--preto)!important;
+}
+
+/* .btn-primary{
+} */

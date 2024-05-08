@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="images/logo/logoDark.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles/index.css">
 </head>
-<body>
+<body data-bs-theme="light" class="temaClaro">
     <header class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -34,7 +34,7 @@
                   </li>
                 </ul>
                 <button type="button" class="btn">
-                    <img src="images/icons/moon.svg" alt="">
+                    <img id="temaBtn" src="images/icons/moon.svg" onclick="trocarTema()" alt="">
                 </button>
               </div>
             </div>
@@ -102,10 +102,36 @@
                   </div>
             </div>
         </section>
-        <section id="adote"></section>
+        <section class="container-fluid p-0 m-0 row" id="adote">
+          <div class="col-6" id="textoAdote">
+            <h3>Insira aqui as suas informações para que possamos encontrar um amigo para você!</h3>
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" placeholder="Insira seu email" class="form-control" id="email" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" placeholder="Insira seu telefone" class="form-control" id="telefone">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="notificacao">
+                <label class="form-check-label" for="notificacao">Aceita receber notificações?</label>
+              </div>
+              <div class="mb-3 d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">ENVIAR</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-6" id="imagemAdote">
+            <img src="images/imgBanner.png" class="w-100" alt="">
+          </div>
+        </section>
     </main>
 
-    <footer class="container-fluid"></footer>
+    <footer class="container-fluid text-center py-3">
+      Todos os direitos reservados a @PawShop - 2024 
+    </footer>
 
     <!-- modais e offcanvas -->
     <!-- modal da coleira -->
@@ -113,19 +139,54 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Coleira</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            ...
+              <img src="images/products/productImage.png" class="w-100" alt="">
+              <h5>R$ 100</h5>
+              <h5>Frete grátis!</h5>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-success">
+              Adicionar ao Carrinho
+              <img src="images/icons/cart3.svg" alt="">
+            </button>
             </div>
         </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+    <script>
+      //apertar no botao de lua
+      //trocar para o tema dark
+      //apertar no botao de sol
+      //trocar tema light
+      // procedimento nome() fimProcedimento
+
+      // function - procedimento
+      function trocarTema(){
+        // queryselector - achar um elemento no html
+        var corpo = document.querySelector("body");
+        var botao = document.querySelector("#temaBtn");
+
+        // if - condicional se
+        // classList - verifica as classes do elemento
+        // contains - se contém o elemento
+        // setAttribute - colocar um atributo no elemento (atributo,valorAtributo)
+        // replace - substitui um elemento pelo outro (o antigo, o novo)
+        if(corpo.classList.contains("temaClaro")){
+          corpo.classList.replace("temaClaro","temaEscuro");
+          corpo.setAttribute("data-bs-theme","dark");
+          botao.setAttribute("src","images/icons/brightness-high.svg");
+        }else{
+          corpo.classList.replace("temaEscuro","temaClaro");
+          corpo.setAttribute("data-bs-theme","light");
+          botao.setAttribute("src","images/icons/moon.svg");
+        }
+      }
+      
+    </script>
 </body>
 </html>
