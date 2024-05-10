@@ -1,0 +1,85 @@
+@font-face {
+    font-family: Gotham;
+    src: url(../fonts/gotham/GothamMedium_1.ttf);
+}
+
+*{
+    font-family: Gotham;
+}
+
+:root{
+    --primario : #1db954 ;
+    --secundario : #1ed760 ;
+    --preto : #191414;
+    --white : #ffffff;
+    --cinza : #1f2020 ;
+    --cinzaClaro : #474747 ;
+}
+
+body{
+    height: 100vh;
+    background: rgb(127,40,205);
+    background: linear-gradient(180deg, rgba(127,40,205,1) 0%, rgba(3,2,2,1) 100%);
+}
+
+.nav-link, .active, .navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: var(--white);
+}
+
+.active{
+    border-bottom: var(--primario) 3px solid;
+}
+
+.card img, .card{
+    border-radius: 0%;
+    border: none;
+}
+
+.navbar-brand img{
+    width: 40px;
+}
+
+#playerMusica{
+    height: auto;
+    background-color: var(--cinza);
+}
+
+#progressoDaMusica{
+    background-color: var(--primario);
+}
+
+#botoesMusica img{
+    height: 40px;
+}
+
+.progressoDaMusicaComeco{
+    width: 0%;
+    transition: 200s;
+}
+
+.progressoDaMusicaCompleto{
+    width: 100%;
+    transition: 200s;
+}
+
+#progressoDaMusicaBarraTotal{
+    width: 60%;
+    background-color: var(--cinzaClaro);
+    height: 3px;
+}
+
+/* menulateral */
+#menuLateral{
+    background-color: #191414d0;
+}
+
+.input-group input,.input-group span{
+    border: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 0%;
+}
+
+input::placeholder{
+    color: white!important;
+}
