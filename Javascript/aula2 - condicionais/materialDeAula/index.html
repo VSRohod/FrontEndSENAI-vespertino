@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="seSenao()">SE,SENAO</button>
+    <button type="button" onclick="caso()">CASO</button>
+    <button type="button" onclick="teste()">teste</button>
+
+    <h2>lojinha</h2>
+    <button type="button" onclick="adicionarAoCarrinho('Rojão',20)">ROJÃO - $20</button>
+    <button type="button" onclick="adicionarAoCarrinho('Playstation',1000)">PLAYSTATION - $1000</button>
+    <button type="button" onclick="adicionarAoCarrinho('Imposto',5000)">IMPOSTO - $5000</button>
+    <button type="button" onclick="adicionarAoCarrinho('Pão de queijo',10)">PÃO DE QUEIJO - $10</button>
+
+    <button type="button" onclick="adicionarAoCarrinho('',-10)">BUG</button>
+    <button type="button" onclick="totalCarrinho()">VERFIFICAR VALOR TOTAL</button>
+    
+    <script src="scripts/script.js"></script>
+    <script src="scripts/lojinha.js"></script>
+</body>
+</html>
