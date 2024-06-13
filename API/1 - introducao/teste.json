@@ -1,0 +1,18 @@
+{
+    "produtos": [
+        {
+            "preco" : 10,
+            "nome": "Livro",
+            "id" : 1,
+            "local" : ["Biblioteca 1","Livraria 2"],
+            "quantidade" : 4
+        },
+        {
+            "preco" : 1900,
+            "nome": "Computador",
+            "id" : 2,
+            "local" : ["Americanas"],
+            "quantidade" : 10
+        }
+    ]
+}

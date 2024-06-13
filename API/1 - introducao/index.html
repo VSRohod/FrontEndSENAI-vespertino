@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="w-100 vh-100 d-flex justify-content-center align-items-center  bg-secondary">
+
+    <main class="bg-white rounded p-5">
+        <form>
+            <div class="mb-3">
+              <label for="cep" class="form-label">Digite seu Cep</label>
+              <input type="text" class="form-control" id="cep" placeholder="00000000000" aria-describedby="cepInfo">
+            </div>
+            <div class="mb-3">
+              <label for="logradouro" class="form-label">Logradouro</label>
+              <input type="text" class="form-control" id="logradouro" placeholder="Ex : Praça da Sé">
+            </div>
+            <div class="mb-3">
+                <label for="complemento" class="form-label">Complemento</label>
+                <input type="text" class="form-control" id="complemento" placeholder="Ex : Apt 40 ou Casa 11">
+            </div>
+            <div class="mb-3">
+                <label for="bairro" class="form-label">Bairro</label>
+                <input type="text" class="form-control" id="bairro" placeholder="Ex : Sé">
+            </div>
+            <div class="mb-3">
+                <label for="localidade" class="form-label">Localidade</label>
+                <input type="text" class="form-control" placeholder="Ex : São paulo" id="localidade">
+            </div>
+            <button type="submit" class="btn btn-primary">COMPRAR</button>
+        </form>
+
+        <div class="container-fluid" id="clima">
+            <input type="text" id="cidadeInput">
+            <h1 id="cidadeNome"></h1>
+            <h4 id="cidadeTemperatura"></h4>
+            <h4 id="cidadeUmidade"></h4>
+            <h4 id="cidadeVentos"></h4>
+        </div>
+    </main> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/clima.js"></script>
+</body>
+</html>
